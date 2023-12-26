@@ -34,8 +34,8 @@ NNLM
 -> Q = (N * D) + (N * D * H) + (H * V) (dominating term: H * V)
 
 - the computational complexity reduction
-- 1. hierarchical version of softmax: frequency of words works for obtaning classes in NN
-  2. avoiding normalized representations of vocabulary
+1. hierarchical version of softmax: frequency of words works for obtaning classes in NN
+2. avoiding normalized representations of vocabulary
 -> most of the computational complexity is caused by N * D * H
 - limitation: need to specify the context length (N)
 
