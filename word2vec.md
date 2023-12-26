@@ -24,9 +24,18 @@ NNLM
 - hidden layer: used to compute probability distribution over all the words in vocabulary
 - output layer: dimensionality V
   
-1-of-V coding: one hot encoding
-N: the total number of words
-D: dimension of word embeddings: specific meaning per each dimension, similar meanings are mapped nearby
-H: hidden layer size
+- 1-of-V coding: one hot encoding
+- N: the total number of words
+- D: dimension of word embeddings: specific meaning per each dimension, similar meanings are - 
+  mapped nearby
+- H: hidden layer size
+-> Q = (N * D) + (N * D * H) + (H * V) (dominating term: H * V)
 
-
+- the computational complexity reduction
+- 1. hierarchical version of softmax: frequency of words works for obtaning classes in NN
+  2. avoiding normalized representations of vocabulary
+-> most of the computational complexity is caused by N * D * H
+- limitation: need to specify the context length
+- 
+### 2. Recurrent Neural Net Language Model(RMNLM)
+- 
