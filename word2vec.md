@@ -65,7 +65,7 @@ NNLM
 
 
 
-HOW TO FIND 'Smallest' when 'Big-Biggest'relation and 'small' are presented??
+HOW TO FIND 'Smallest' when 'Big-Biggest' relation and 'small' are presented??
 - X = vector("biggest") - vector("big") + vector('small') (measured by cosine distance)
 - cosine distance = 1 - cosine similarity(X dot Y / ||X|| dot ||Y||)
 
