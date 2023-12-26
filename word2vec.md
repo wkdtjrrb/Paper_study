@@ -16,6 +16,7 @@ NNLM
 
 ## Model Architectures
 - distriuted representations: distribute the meaning of the word in various dimensions
+- we can designate the dimension of words
 ㄴ try to minimize coputational complexity
 
 ### 1. FEEDFORWARD NEURAL NET LANGUAGE MODEL(NNLM)
