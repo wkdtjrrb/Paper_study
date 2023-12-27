@@ -1,4 +1,4 @@
-<img width="478" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/d6baabf2-079d-4c6a-9e49-5e70f12286bc"># Efficient Estimation of Word Representations in vector space(2013)
+# Efficient Estimation of Word Representations in vector space(2013)
 
 ## Introduction
 ### Goals : techniques that can be used for learning high-quality word vectors from huge datasets
