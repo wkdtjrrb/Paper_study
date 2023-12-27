@@ -1,4 +1,4 @@
-# Efficient Estimation of Word Representations in vector space(2013)
+<img width="478" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/d6baabf2-079d-4c6a-9e49-5e70f12286bc"># Efficient Estimation of Word Representations in vector space(2013)
 
 ## Introduction
 ### Goals : techniques that can be used for learning high-quality word vectors from huge datasets
@@ -33,6 +33,8 @@ NNLM
 - H: hidden layer size
 -> Q = (N * D) + (N * D * H) + (H * V) (dominating term: H * V)
 
+<img width="478" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/3ae34bd1-ea2d-4576-875c-940503419d64">
+
 - the computational complexity reduction
 1. hierarchical version of softmax: frequency of words works for obtaning classes in NN
 2. avoiding normalized representations of vocabulary
@@ -42,7 +44,7 @@ NNLM
 
 ### 2. Recurrent Neural Net Language Model(RMNLM)
 - It constist of input, hidden and output layer(**NO projection layer**)
-- It can represent more complex patterns thatn the shallow neural networks
+- It can represent more complex patterns than the shallow neural networks
 - hidden layer and output layer connections using time-delay: short term memory
 -> Q = (H * H) + (H * V) (D = H)
   with hierarchical softmax, most of the complexity comes from H * H
