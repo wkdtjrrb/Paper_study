@@ -93,7 +93,9 @@ Table 2: Comparison of architectures using models trained on the same data, with
 > Semantic Accuracy: clothing is to shirt as dish is to bowl
 > Syntactic Accuracy: A is to B, C is to ____?
 >> Adjectives: base/comparative/superlative forms
+
 >> Common nouns: singular/plural forms, possessive/non-possessive forms
+
 >> Verbs: base, past and 3rd person present tense forms
 
 ### Comparison of Model Architectures
