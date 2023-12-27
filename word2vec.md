@@ -39,6 +39,7 @@ NNLM
 -> most of the computational complexity is caused by N * D * H
 - limitation: need to specify the context length (N)
 
+
 ### 2. Recurrent Neural Net Language Model(RMNLM)
 - It constist of input, hidden and output layer(**NO projection layer**)
 - It can represent more complex patterns thatn the shallow neural networks
@@ -63,11 +64,58 @@ NNLM
 - increasing range improves quality of the resulting word vectors, computational complexity
 -> Q = (C * D + D * log2(V))
 
+<img width="502" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/53ca3b01-c49b-497b-a3e8-58fb4a45b7ae">
+
+<img width="502" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/ac2adb08-6c13-4209-a449-cb72ec409ac4">
 
 
 HOW TO FIND 'Smallest' when 'Big-Biggest' relation and 'small' are presented??
 - X = vector("biggest") - vector("big") + vector('small') (measured by cosine distance)
 - cosine distance = 1 - cosine similarity(X dot Y / ||X|| dot ||Y||)
 
+## Results
 
-  
+### Maximization of Accuracy
+
+This paper used a Google News cropus for training the word vectors(6B tokens)
+
+Table 1: Accuracy on subset of the Semantic-Syntactic Word Relationship test set, using word vectors from the CBOW architecture with limited vocabulary. Only questions containing words from the most frequent 30k words are used.
+
+<img width="508" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/4dd6e656-bb4d-4100-a3fd-ec28ad964f1e">
+
+> Improving Dimensionality, the accuracy becomes better because high dimensionality means we can describe the details of the words
+> Adding more training data provides diminishing improvements
+
+Table 2: Comparison of architectures using models trained on the same data, with 640-dimensional word vectors. The accuracies are reported on our Semantic- Syntactic Word Relationship test set, and on the syntactic relationship test set
+
+<img width="583" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/1547e0b1-47f2-4906-bcd6-a0af70ba2a44">
+
+> Semantic Accuracy: clothing is to shirt as dish is to bowl
+> Syntactic Accuracy: A is to B, C is to ____?
+>> Adjectives: base/comparative/superlative forms
+>> Common nouns: singular/plural forms, possessive/non-possessive forms
+>> Verbs: base, past and 3rd person present tense forms
+
+### Comparison of Model Architectures
+
+Table 3: Comparison of publicly available word vectors on the Semantic-Syntactic Word Relationship test set, and word vectors from our models. Full vocabularies are used
+
+<img width="547" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/2f82805f-a594-4f8f-bdc2-81e665c9b747">
+
+> With lower dimensionality, using more training words can be used to improve accuracy
+
+Table 4: Comparison of models trained for three epochs on the same data and models trained for one epoch. Accuracy is reported on the full Semantic-Syntactic data set
+
+<img width="607" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/0d706b07-9ceb-428c-ab12-79e0bf59050a">
+
+> Skip-gram model has very high accuracy but it takes longer time 
+
+Table 5: Comparison of models trained using the DistBelief distributed framework. Note that training of NNLM with 1000-dimensional vectors would take too long to complete
+
+<img width="592" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/4fdf09d6-73ea-4a01-912e-498ec7510543">
+
+Table 6: Comparison and combination of models on the Microsoft Sentence Completion Challenge.
+
+<img width="289" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/88b34e0c-d7de-4ce7-8c5a-b7534cf5414f">
+
+
