@@ -120,4 +120,7 @@ Table 6: Comparison and combination of models on the Microsoft Sentence Completi
 
 <img width="289" alt="image" src="https://github.com/wkdtjrrb/Paper_study/assets/103736979/88b34e0c-d7de-4ce7-8c5a-b7534cf5414f">
 
-
+## Conclusion
+- high quality of vector representations
+- lower computational complexity -> we can use high dimension word vectors
+  
